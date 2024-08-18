@@ -11,6 +11,12 @@ body {
   grid-template-rows: 160px 1fr;
 }
 
+h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+
 .sidebar {
   position: fixed;
   height: 100%;
@@ -23,6 +29,7 @@ body {
   grid-auto-rows: 40px;
   align-items: center;
   padding-left: 20px;
+  z-index: 1;
 }
 
 .sidebar .logo {
@@ -49,11 +56,6 @@ body {
 .search-icon-container,
 .notification-icon-container {
   width: 25px;
-}
-
-.header,
-.main {
-  padding-left: 250px;
 }
 
 .header {
@@ -135,4 +137,110 @@ body {
 
 .main {
   background-color: #cbd5e1;
+  display: grid;
+  grid-template-columns: 800px 300px;
+  padding-left: 270px;
+  padding-top: 20px;
+  align-items: start;
+  padding-right: 50px;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: 350px 350px;
+  column-gap: 40px;
+}
+
+.project-card {
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  border-left: solid 8px orange;
+  position: relative;
+}
+
+.interact {
+  display: grid;
+  grid-template-columns: repeat(3, 25px);
+  gap: 20px;
+  position: absolute;
+  right: 20px;
+  bottom: 5px;
+}
+
+.interact div {
+  width: 25px;
+}
+
+.project-card p:first-child {
+  margin: 0;
+  font-weight: bold;
+}
+
+.project-card p:nth-child(2) {
+  margin-bottom: 30px;
+  color: lightslategray;
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.announcement-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.news p:first-child {
+  font-weight: bold;
+  margin: 0;
+}
+
+.news p:nth-child(2) {
+  color: lightslategrey;
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.trending-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.trending-user .user-ava img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 25px;
+  object-position: center;
+}
+
+.trending h3 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.trending-user {
+  display: grid;
+  grid-template-columns: 50px 200px;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.trending-container .trending-user:last-child {
+  margin-bottom: 0;
+}
+
+.trending-user p {
+  margin: 0;
+}
+
+.trending-user .nickname {
+  color: lightslategray;
+  font-weight: normal;
+  font-size: 13px;
+  margin-top: 5px;
 }
